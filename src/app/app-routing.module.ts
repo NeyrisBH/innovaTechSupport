@@ -5,7 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path: 'header', component: HeaderComponent},
-  {path: 'footer', component: FooterComponent}
+  {path: 'footer', component: FooterComponent},
 ];
 
 @NgModule({
