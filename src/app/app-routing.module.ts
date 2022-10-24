@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'servicio-software', component: ServicioSoftwareComponent },
   { path: 'servicio-hardware', component: ServicioHardwareComponent},
   { path: 'servicio-telecomunicaciones', component: ServicioTelecomunicacionesComponent},
-  { path: 'nosotros', component: NosotrosComponent}
+  { path: 'nosotros', component: NosotrosComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full'}, //Establecer redirección inicial
 ];
 
 @NgModule({

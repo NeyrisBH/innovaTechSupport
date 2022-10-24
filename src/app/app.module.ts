@@ -10,6 +10,8 @@ import { ServicioHardwareComponent } from './tipoServicios/servicio-hardware/ser
 import { ServicioTelecomunicacionesComponent } from './tipoServicios/servicio-telecomunicaciones/servicio-telecomunicaciones.component';
 import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,15 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     ServicioTelecomunicacionesComponent,
     HomeComponent,
     NosotrosComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      { path: 'page-not-found', component: PageNotFoundComponent},
+      { path: '**', component: PageNotFoundComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
